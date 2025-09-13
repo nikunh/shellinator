@@ -1,19 +1,19 @@
 {
-  "name": "Shellinator DevPod Environment",
+  "name": "Shellinator DevPod Environment", 
   "image": "ubuntu:22.04",
   "features": {
-    "ghcr.io/nikunh/001-dev-packages-vishkrm:0.0.7": {},
-    "ghcr.io/nikunh/002-user-setup-vishkrm:0.0.3": {},
+    "ghcr.io/nikunh/001-dev-packages-vishkrm:latest": {},
+    "ghcr.io/nikunh/002-user-setup-vishkrm:latest": {},
     "ghcr.io/devcontainers/features/git:1": {},
     "ghcr.io/devcontainers/features/common-utils:2": {},
-    "ghcr.io/nikunh/003-zsh-setup-vishkrm:0.0.1": {},
+    "ghcr.io/nikunh/003-zsh-setup-vishkrm:latest": {},
     "ghcr.io/devcontainers/features/sshd:1": {},
-    "ghcr.io/nikunh/dev-utils-vishkrm:0.0.1": {},
-    "ghcr.io/nikunh/git-tools-vishkrm:0.0.1": {},
-    "ghcr.io/nikunh/jq-likes-vishkrm:0.0.1": {},
-    "ghcr.io/nikunh/nas-connector-vishkrm:0.0.1": {},
-    "ghcr.io/nikunh/powerlevel10k-vishkrm:0.0.1": {},
-    "ghcr.io/nikunh/tmux-neovim-git-vishkrm:0.0.1": {}
+    "ghcr.io/nikunh/dev-utils-vishkrm:latest": {},
+    "ghcr.io/nikunh/git-tools-vishkrm:latest": {},
+    "ghcr.io/nikunh/jq-likes-vishkrm:latest": {},
+    "ghcr.io/nikunh/nas-connector-vishkrm:latest": {},
+    "ghcr.io/nikunh/powerlevel10k-vishkrm:latest": {},
+    "ghcr.io/nikunh/tmux-neovim-git-vishkrm:latest": {}
   },
   "remoteUser": "babaji",
   "containerEnv": {
@@ -24,7 +24,7 @@
     "vscode": {
       "extensions": [
         "ms-python.python",
-        "github.copilot",
+        "github.copilot", 
         "github.copilot-chat"
       ]
     }
