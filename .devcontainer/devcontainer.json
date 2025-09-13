@@ -1,0 +1,92 @@
+{
+  "name": "Shellinator DevPod Environment",
+  "image": "ubuntu:22.04",
+  "features": {
+    "ghcr.io/nikunh/001-dev-packages:latest": {},
+    "ghcr.io/nikunh/002-user-setup:latest": {},
+    "ghcr.io/nikunh/babaji-config:latest": {},
+    "ghcr.io/nikunh/system-personality:latest": {
+      "type": "dev-workstation"
+    },
+    "ghcr.io/nikunh/dev-utils:latest": {},
+    "ghcr.io/devcontainers/features/git:1": {},
+    "ghcr.io/devcontainers/features/common-utils:2": {},
+    "ghcr.io/nikunh/003-zsh-setup:latest": {},
+    "ghcr.io/devcontainers/features/sshd:1": {
+      "version": "latest"
+    },
+    "ghcr.io/nikunh/dev-tools-additions:latest": {},
+    "ghcr.io/devcontainers/features/conda:1": {},
+    "ghcr.io/devcontainers/features/kubectl-helm-minikube:1": {},
+    "ghcr.io/devcontainers/features/docker-in-docker:2": {},
+    "ghcr.io/devcontainers/features/terraform:1": {},
+    "ghcr.io/nikunh/sops:latest": {},
+    "ghcr.io/nikunh/k9s:latest": {},
+    "ghcr.io/nikunh/nushell:latest": {},
+    "ghcr.io/nikunh/powerlevel10k:latest": {},
+    "ghcr.io/devcontainers/features/node:1": {
+      "version": "lts"
+    },
+    "ghcr.io/devcontainers/features/go:1": {
+      "version": "latest"
+    },
+    "ghcr.io/nikunh/devops-tools:latest": {
+      "installAwsCli": true
+    },
+    "ghcr.io/nikunh/browsh:latest": {},
+    "ghcr.io/nikunh/gum:latest": {},
+    "ghcr.io/nikunh/aider:latest": {},
+    "ghcr.io/nikunh/k8s-utilities:latest": {},
+    "ghcr.io/nikunh/cloudflared:latest": {},
+    "ghcr.io/nikunh/luarocks:latest": {},
+    "ghcr.io/nikunh/code-server:latest": {},
+    "ghcr.io/nikunh/tmux-neovim-git:latest": {},
+    "ghcr.io/nikunh/ai-tools:latest": {
+      "claudeApiKey": "",
+      "openCodeConfig": true,
+      "enableShellIntegration": true
+    }
+  },
+  "remoteUser": "babaji",
+  "containerEnv": {
+    "HOME": "/home/babaji"
+  },
+  "workspaceFolder": "/workspaces/shellinator",
+  "runArgs": [
+    "--cap-add=SYS_ADMIN",
+    "--security-opt",
+    "apparmor=unconfined",
+    "--privileged"
+  ],
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "ms-toolsai.jupyter",
+        "ms-python.debugpy",
+        "visualstudioexptteam.vscodeintellicode",
+        "github.copilot",
+        "github.copilot-chat",
+        "formulahendry.code-runner",
+        "ms-python.isort",
+        "mtxr.sqltools",
+        "mtxr.sqltools-driver-mysql",
+        "mtxr.sqltools-driver-sqlite",
+        "cweijan.vscode-mysql-client2",
+        "ms-azuretools.vscode-docker",
+        "redhat.vscode-yaml",
+        "esbenp.prettier-vscode",
+        "ms-vscode.makefile-tools",
+        "unified-lsp.vscode-unified-lsp-client",
+        "continue.continue",
+        "ex-human.model-context",
+        "ms-kubernetes-tools.vscode-kubernetes-tools"
+      ],
+      "settings": {}
+    }
+  },
+  "shutdownAction": "none",
+  "postStartCommand": "echo DevPod Shellinator environment started! Welcome babaji! && sudo service ssh restart || true",
+  "postAttachCommand": "echo Attached to Shellinator DevPod environment."
+}
