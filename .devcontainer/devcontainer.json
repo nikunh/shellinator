@@ -7,53 +7,28 @@
     "ghcr.io/devcontainers/features/git:1": {},
     "ghcr.io/devcontainers/features/common-utils:2": {},
     "ghcr.io/nikunh/003-zsh-setup-vishkrm:0.0.1": {},
-    "ghcr.io/devcontainers/features/sshd:1": {
-      "version": "latest"
-    },
+    "ghcr.io/devcontainers/features/sshd:1": {},
     "ghcr.io/nikunh/dev-utils-vishkrm:0.0.1": {},
     "ghcr.io/nikunh/git-tools-vishkrm:0.0.1": {},
     "ghcr.io/nikunh/jq-likes-vishkrm:0.0.1": {},
     "ghcr.io/nikunh/nas-connector-vishkrm:0.0.1": {},
     "ghcr.io/nikunh/powerlevel10k-vishkrm:0.0.1": {},
-    "ghcr.io/nikunh/tmux-neovim-git-vishkrm:0.0.1": {},
-    "ghcr.io/devcontainers/features/conda:1": {},
-    "ghcr.io/devcontainers/features/kubectl-helm-minikube:1": {},
-    "ghcr.io/devcontainers/features/docker-in-docker:2": {},
-    "ghcr.io/devcontainers/features/terraform:1": {},
-    "ghcr.io/devcontainers/features/node:1": {
-      "version": "lts"
-    },
-    "ghcr.io/devcontainers/features/go:1": {
-      "version": "latest"
-    }
+    "ghcr.io/nikunh/tmux-neovim-git-vishkrm:0.0.1": {}
   },
   "remoteUser": "babaji",
   "containerEnv": {
     "HOME": "/home/babaji"
   },
   "workspaceFolder": "/workspaces/shellinator",
-  "runArgs": [
-    "--cap-add=SYS_ADMIN",
-    "--security-opt",
-    "apparmor=unconfined",
-    "--privileged"
-  ],
   "customizations": {
     "vscode": {
       "extensions": [
         "ms-python.python",
-        "ms-python.vscode-pylance",
-        "ms-toolsai.jupyter",
         "github.copilot",
-        "github.copilot-chat",
-        "ms-azuretools.vscode-docker",
-        "redhat.vscode-yaml",
-        "ms-kubernetes-tools.vscode-kubernetes-tools"
-      ],
-      "settings": {}
+        "github.copilot-chat"
+      ]
     }
   },
-  "shutdownAction": "none",
-  "postStartCommand": "echo \"DevPod Shellinator environment started! Welcome babaji!\" && sudo service ssh restart || true",
-  "postAttachCommand": "echo \"Attached to Shellinator DevPod environment.\""
+  "postStartCommand": "echo DevPod Shellinator started! Welcome babaji! && sudo service ssh restart",
+  "postAttachCommand": "echo Attached to Shellinator."
 }
