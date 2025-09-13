@@ -54,6 +54,6 @@
     }
   },
   "shutdownAction": "none",
-  "postStartCommand": "echo \"DevPod Shellinator environment started\! Welcome babaji\!\" && sudo service ssh restart || true",
+  "postStartCommand": "echo \"DevPod Shellinator environment started! Welcome babaji!\" && sudo service ssh restart || true",
   "postAttachCommand": "echo \"Attached to Shellinator DevPod environment.\""
 }
