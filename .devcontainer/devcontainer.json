@@ -11,13 +11,13 @@
     "ghcr.io/devcontainers/features/sshd:1": {
       "version": "latest"
     },
-    "ghcr.io/nikunh/001-dev-packages-vishkrm:1": {},
-    "ghcr.io/nikunh/002-user-setup-vishkrm:1": {},
-    "ghcr.io/nikunh/003-zsh-setup-vishkrm:1": {},
-    "ghcr.io/nikunh/luarocks-vishkrm:1": {},
-    "ghcr.io/nikunh/nas-connector-vishkrm:1": {},
-    "ghcr.io/nikunh/powerlevel10k-vishkrm:1": {},
-    "ghcr.io/nikunh/tmux-neovim-git-vishkrm:1": {}
+    "ghcr.io/nikunh/001-dev-packages-vishkrm:latest": {},
+    "ghcr.io/nikunh/002-user-setup-vishkrm:latest": {},
+    "ghcr.io/nikunh/003-zsh-setup-vishkrm:latest": {},
+    "ghcr.io/nikunh/luarocks-vishkrm:latest": {},
+    "ghcr.io/nikunh/nas-connector-vishkrm:latest": {},
+    "ghcr.io/nikunh/powerlevel10k-vishkrm:latest": {},
+    "ghcr.io/nikunh/tmux-neovim-git-vishkrm:latest": {}
   },
   "remoteUser": "babaji",
   "postCreateCommand": "echo 'DevContainer ready! Welcome to Shellinator DevPod Environment with Full Features!'",
