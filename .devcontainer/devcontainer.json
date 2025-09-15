@@ -1,5 +1,5 @@
 {
-  "name": "Shellinator DevPod Environment - Minimal Test",
+  "name": "Shellinator DevPod Environment - Full Features",
   "image": "ubuntu:22.04",
   "features": {
     "ghcr.io/devcontainers/features/common-utils:2": {
@@ -10,10 +10,17 @@
     "ghcr.io/devcontainers/features/git:1": {},
     "ghcr.io/devcontainers/features/sshd:1": {
       "version": "latest"
-    }
+    },
+    "ghcr.io/nikunh/001-dev-packages-vishkrm:1": {},
+    "ghcr.io/nikunh/002-user-setup-vishkrm:1": {},
+    "ghcr.io/nikunh/003-zsh-setup-vishkrm:1": {},
+    "ghcr.io/nikunh/luarocks-vishkrm:1": {},
+    "ghcr.io/nikunh/nas-connector-vishkrm:1": {},
+    "ghcr.io/nikunh/powerlevel10k-vishkrm:1": {},
+    "ghcr.io/nikunh/tmux-neovim-git-vishkrm:1": {}
   },
   "remoteUser": "babaji",
-  "postCreateCommand": "echo 'DevContainer ready! Welcome to Shellinator DevPod Environment!'",
+  "postCreateCommand": "echo 'DevContainer ready! Welcome to Shellinator DevPod Environment with Full Features!'",
   "customizations": {
     "vscode": {
       "extensions": [
