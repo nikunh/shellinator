@@ -14,7 +14,7 @@
     "ghcr.io/nikunh/001-dev-packages-vishkrm/001-dev-packages:0.0.3": {},
     "ghcr.io/nikunh/002-user-setup-vishkrm/002-user-setup:0.0.5": {},
     "ghcr.io/nikunh/003-zsh-setup-vishkrm/003-zsh-setup:0.0.2": {},
-    "ghcr.io/nikunh/tmux-neovim-git-vishkrm/tmux-neovim-git:0.0.13": {},
+    "ghcr.io/nikunh/tmux-neovim-git-vishkrm/tmux-neovim-git:0.0.14": {},
     "ghcr.io/devcontainers/features/kubectl-helm-minikube:1": {},
     "ghcr.io/devcontainers/features/docker-in-docker:2": {},
     "ghcr.io/devcontainers/features/terraform:1": {},
