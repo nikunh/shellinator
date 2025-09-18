@@ -1,20 +1,20 @@
 {
-  "name": "Shellinator DevPod Environment - Complete v0.0.15 (Shell Fix + AI Plugins + TMUX)",
+  "name": "Shellinator DevPod Environment - GitHub v0.0.1 Fresh Start",
   "image": "ubuntu:22.04",
   "features": {
     "ghcr.io/devcontainers/features/common-utils:2": {
       "username": "babaji",
       "userUid": "1000",
-      "userGid": "1000"
+      "userGid": "1000",
+      "configureZshAsDefaultShell": true
     },
     "ghcr.io/devcontainers/features/git:1": {},
     "ghcr.io/devcontainers/features/sshd:1": {
       "version": "latest"
     },
-    "ghcr.io/nikunh/001-dev-packages-vishkrm/001-dev-packages:0.0.3": {},
-    "ghcr.io/nikunh/002-user-setup-vishkrm/002-user-setup:0.0.5": {},
+    "ghcr.io/nikunh/001-dev-packages-vishkrm/001-dev-packages:0.0.4": {},
+    "ghcr.io/nikunh/002-user-setup-vishkrm/002-user-setup:0.0.3": {},
     "ghcr.io/nikunh/003-zsh-setup-vishkrm/003-zsh-setup:0.0.2": {},
-    "ghcr.io/nikunh/tmux-neovim-git-vishkrm/tmux-neovim-git:0.0.15": {},
     "ghcr.io/devcontainers/features/kubectl-helm-minikube:1": {},
     "ghcr.io/devcontainers/features/docker-in-docker:2": {},
     "ghcr.io/devcontainers/features/terraform:1": {},
@@ -31,7 +31,7 @@
     "SSH_TARGET_PORT": "${localEnv:SSH_TARGET_PORT:2222}"
   },
   "forwardPorts": ["${localEnv:SSH_TARGET_PORT:2222}", 6623],
-  "postCreateCommand": "echo 'DevContainer ready! Welcome to Shellinator DevPod Environment - Complete v0.0.15! Shell fix v0.0.5 forces zsh default. AI plugins v0.0.12 properly installed. TMUX v0.0.15 installed.'",
+  "postCreateCommand": "echo 'DevContainer ready! Shellinator GitHub v0.0.1 - Fresh start with clean features. SSH, PowerLevel10k, nvim, tmux all available. Use shellinator-enhance for private features.'",
   "customizations": {
     "vscode": {
       "extensions": [
