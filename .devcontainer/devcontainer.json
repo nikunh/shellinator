@@ -16,7 +16,7 @@
     "ghcr.io/nikunh/002-user-setup-vishkrm/002-user-setup:0.0.3": {},
     "ghcr.io/nikunh/003-zsh-setup-vishkrm/003-zsh-setup:0.0.4": {},
     "ghcr.io/nikunh/tmux-neovim-git-vishkrm/tmux-neovim-git:0.0.4": {},
-    "ghcr.io/nikunh/aider-vishkrm/aider:0.0.2": {},
+    "ghcr.io/nikunh/aider-vishkrm/aider:0.0.3": {},
     "ghcr.io/nikunh/ai-tools-vishkrm/ai-tools:0.0.1": {},
     "ghcr.io/nikunh/babaji-config-vishkrm/babaji-config:1.0.0": {},
     "ghcr.io/devcontainers/features/kubectl-helm-minikube:1": {},
@@ -34,7 +34,7 @@
     "HOME": "/home/babaji",
     "SSH_TARGET_PORT": "${localEnv:SSH_TARGET_PORT:2222}"
   },
-  "forwardPorts": ["${localEnv:SSH_TARGET_PORT:2222}", 6623],
+  "forwardPorts": [2222, 6623],
   "postCreateCommand": "echo 'DevContainer ready! Shellinator GitHub v0.0.1 - Fresh start with clean features. SSH, PowerLevel10k, nvim, tmux all available. Use shellinator-enhance for private features.'",
   "customizations": {
     "vscode": {
