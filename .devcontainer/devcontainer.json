@@ -21,7 +21,6 @@
     "ghcr.io/nikunh/git-tools-vishkrm/git-tools:0.0.1": {},
     "ghcr.io/nikunh/dev-utils-vishkrm/dev-utils:0.0.1": {},
     "ghcr.io/nikunh/dev-tools-additions-vishkrm/dev-tools-additions:0.0.1": {},
-    "ghcr.io/nikunh/conda-vishkrm/conda:0.0.1": {},
     "ghcr.io/nikunh/go-env-vishkrm/go-env:0.0.1": {},
     "ghcr.io/nikunh/node-env-vishkrm/node-env:0.0.1": {},
     "ghcr.io/nikunh/luarocks-vishkrm/luarocks:0.0.1": {},
@@ -41,7 +40,7 @@
     "SSH_TARGET_PORT": "${localEnv:SSH_TARGET_PORT:2222}"
   },
   "forwardPorts": [2222, 6623],
-  "postCreateCommand": "echo 'DevContainer ready! Shellinator GitHub v0.0.1 - Clean GitHub features loaded. SSH, nvim, tmux, code-server, AI tools available. Browsh temporarily disabled. Use shellinator-enhance for private features.'",
+  "postCreateCommand": "echo 'DevContainer ready! Shellinator GitHub v0.0.1 - Clean GitHub features loaded. SSH, nvim, tmux, code-server, AI tools available. Browsh and conda temporarily disabled. Use shellinator-enhance for private features.'",
   "customizations": {
     "vscode": {
       "extensions": [
