@@ -25,7 +25,7 @@
     "ghcr.io/nikunh/k9s-vishkrm/k9s:0.0.2": {},
     "ghcr.io/nikunh/cloudflared-vishkrm/cloudflared:0.0.2": {},
     "ghcr.io/nikunh/sops-vishkrm/sops:0.0.2": {},
-    "ghcr.io/nikunh/jq-likes-vishkrm/jq-likes:0.0.1": {},
+    "ghcr.io/nikunh/jq-likes-vishkrm/jq-likes:0.0.2": {},
     "ghcr.io/nikunh/code-server-vishkrm/code-server:0.0.2": {}
   },
   "remoteUser": "babaji",
