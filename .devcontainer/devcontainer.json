@@ -16,7 +16,7 @@
     "ghcr.io/nikunh/dev-utils-vishkrm/dev-utils:0.0.1": {},
     "ghcr.io/nikunh/dev-tools-additions-vishkrm/dev-tools-additions:0.0.2": {},
     "ghcr.io/nikunh/go-env-vishkrm/go-env:0.0.1": {},
-    "ghcr.io/nikunh/ai-tools-vishkrm/ai-tools:0.0.4": {},
+    "ghcr.io/nikunh/ai-tools-vishkrm/ai-tools:0.0.5": {},
     "ghcr.io/nikunh/node-env-vishkrm/node-env:0.0.1": {},
     "ghcr.io/nikunh/luarocks-vishkrm/luarocks:0.0.2": {},
     "ghcr.io/nikunh/nushell-vishkrm/nushell:0.0.2": {},
