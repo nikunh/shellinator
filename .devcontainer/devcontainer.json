@@ -2,7 +2,7 @@
   "name": "Shellinator DevPod Environment - GitHub v0.0.1 Full Features",
   "image": "ubuntu:22.04",
   "features": {
-    "ghcr.io/nikunh/001-dev-packages-vishkrm/001-dev-packages:0.0.5": {},
+    "ghcr.io/nikunh/001-dev-packages-vishkrm/001-dev-packages:0.0.6": {},
     "ghcr.io/devcontainers/features/git:1": {},
     "ghcr.io/devcontainers/features/sshd:1": {
       "version": "latest"
