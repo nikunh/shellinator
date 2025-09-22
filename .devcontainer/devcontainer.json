@@ -21,7 +21,7 @@
     "ghcr.io/nikunh/node-env-vishkrm/node-env:0.0.2": {},
     "ghcr.io/nikunh/luarocks-vishkrm/luarocks:0.0.3": {},
     "ghcr.io/nikunh/nushell-vishkrm/nushell:0.0.3": {},
-    "ghcr.io/nikunh/devops-tools-vishkrm/devops-tools:0.0.2": {},
+    "ghcr.io/nikunh/devops-tools-vishkrm/devops-tools:0.0.3": {},
     "ghcr.io/nikunh/k8s-utilities-vishkrm/k8s-utilities:0.0.3": {},
     "ghcr.io/nikunh/k9s-vishkrm/k9s:0.0.3": {},
     "ghcr.io/nikunh/cloudflared-vishkrm/cloudflared:0.0.3": {},
