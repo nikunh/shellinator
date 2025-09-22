@@ -9,7 +9,7 @@
       "version": "latest"
     },
     "ghcr.io/nikunh/002-user-setup-vishkrm/002-user-setup:0.0.3": {},
-    "ghcr.io/nikunh/003-zsh-setup-vishkrm/003-zsh-setup:0.0.1": {},
+    "ghcr.io/nikunh/003-zsh-setup-vishkrm/003-zsh-setup:0.0.2": {},
     "ghcr.io/nikunh/git-tools-vishkrm/git-tools:0.0.3": {},
     "ghcr.io/nikunh/tmux-neovim-git-vishkrm/tmux-neovim-git:0.0.11": {},
     "ghcr.io/nikunh/aider-vishkrm/aider:0.0.4": {},
