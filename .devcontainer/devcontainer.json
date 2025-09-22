@@ -4,6 +4,7 @@
   "features": {
     "ghcr.io/nikunh/001-dev-packages-vishkrm/001-dev-packages:0.0.6": {},
     "ghcr.io/devcontainers/features/git:1": {},
+    "ghcr.io/devcontainers/features/go:1": {},
     "ghcr.io/devcontainers/features/sshd:1": {
       "version": "latest"
     },
