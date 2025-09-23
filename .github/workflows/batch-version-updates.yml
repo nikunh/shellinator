@@ -15,6 +15,11 @@ on:
         default: ''
   schedule:
     - cron: '*/10 * * * *'  # Every 10 minutes
+  push:
+    branches:
+      - master
+    paths:
+      - '.github/workflows/batch-version-updates.yml'
 
 jobs:
   update_devcontainer:
@@ -40,6 +45,10 @@ jobs:
         run: |
           echo "Collecting feature version updates..."
 
+          if [ "${{ github.event_name }}" = "push" ]; then
+            echo "🔧 Workflow triggered by push event - testing workflow functionality"
+          fi
+
           # Create update tracking file if it doesn't exist
           mkdir -p .github/version-updates
 
@@ -48,8 +57,8 @@ jobs:
             echo "[]" > .github/version-updates/pending.json
           fi
 
-          # Add current event to pending updates (if triggered by dispatch)
-          if [ "${{ github.event_name }}" = "repository_dispatch" ]; then
+          # Add current event to pending updates (if triggered by dispatch and has payload)
+          if [ "${{ github.event_name }}" = "repository_dispatch" ] && [ "${{ github.event.client_payload.feature }}" != "" ]; then
             # Use node to properly append to JSON array
             cat > append_update.js << 'EOF'
 const fs = require('fs');
