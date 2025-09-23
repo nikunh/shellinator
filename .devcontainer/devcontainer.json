@@ -12,7 +12,6 @@
     "ghcr.io/nikunh/babaji-config-vishkrm/babaji-config:1.0.2": {},
     "ghcr.io/nikunh/dev-tools-additions-vishkrm/dev-tools-additions:0.0.3": {},
     "ghcr.io/nikunh/go-env-vishkrm/go-env:0.0.2": {},
-    "ghcr.io/nikunh/ai-tools-vishkrm/ai-tools:0.0.10": {},
     "ghcr.io/nikunh/node-env-vishkrm/node-env:0.0.2": {},
     "ghcr.io/nikunh/luarocks-vishkrm/luarocks:0.0.3": {},
     "ghcr.io/nikunh/nushell-vishkrm/nushell:0.0.3": {},
@@ -27,7 +26,8 @@
     "ghcr.io/nikunh/tmux-neovim-git-vishkrm/tmux-neovim-git:0.0.13": {},
     "ghcr.io/nikunh/code-server-vishkrm/code-server:0.0.4": {},
     "ghcr.io/nikunh/dev-utils-vishkrm/dev-utils:0.0.6": {},
-    "ghcr.io/nikunh/003-zsh-setup-vishkrm/003-zsh-setup:0.0.4": {}
+    "ghcr.io/nikunh/003-zsh-setup-vishkrm/003-zsh-setup:0.0.4": {},
+    "ghcr.io/nikunh/ai-tools-vishkrm/ai-tools:0.0.13": {}
   },
   "remoteUser": "babaji",
   "containerEnv": {
