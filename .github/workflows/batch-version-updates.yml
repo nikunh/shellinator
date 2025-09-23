@@ -42,18 +42,49 @@ jobs:
 
           # Create update tracking file if it doesn't exist
           mkdir -p .github/version-updates
-          touch .github/version-updates/pending.json
+
+          # Initialize as empty JSON array if file doesn't exist or is empty
+          if [ ! -f .github/version-updates/pending.json ] || [ ! -s .github/version-updates/pending.json ]; then
+            echo "[]" > .github/version-updates/pending.json
+          fi
 
           # Add current event to pending updates (if triggered by dispatch)
           if [ "${{ github.event_name }}" = "repository_dispatch" ]; then
-            echo '${{ toJson(github.event.client_payload) }}' >> .github/version-updates/pending.json
+            # Use node to properly append to JSON array
+            node -e "
+              const fs = require('fs');
+              const file = '.github/version-updates/pending.json';
+              let updates = [];
+              try {
+                const content = fs.readFileSync(file, 'utf8').trim();
+                if (content) updates = JSON.parse(content);
+              } catch (e) {
+                updates = [];
+              }
+              const newUpdate = ${{ toJson(github.event.client_payload) }};
+              updates.push(newUpdate);
+              fs.writeFileSync(file, JSON.stringify(updates, null, 2));
+              console.log('Added update for:', newUpdate.feature);
+            "
           fi
 
           # Check if we have any pending updates
-          if [ -s .github/version-updates/pending.json ]; then
+          UPDATE_COUNT=$(node -e "
+            const fs = require('fs');
+            try {
+              const updates = JSON.parse(fs.readFileSync('.github/version-updates/pending.json', 'utf8'));
+              console.log(updates.length);
+            } catch (e) {
+              console.log(0);
+            }
+          ")
+
+          if [ "$UPDATE_COUNT" -gt 0 ]; then
             echo "has_updates=true" >> $GITHUB_OUTPUT
+            echo "Found $UPDATE_COUNT pending updates"
           else
             echo "has_updates=false" >> $GITHUB_OUTPUT
+            echo "No pending updates"
           fi
 
       - name: "Process version updates"
@@ -71,10 +102,7 @@ jobs:
           const devcontainer = JSON.parse(fs.readFileSync(devcontainerPath, 'utf8'));
 
           // Read pending updates
-          const pendingUpdates = fs.readFileSync('.github/version-updates/pending.json', 'utf8')
-            .split('\n')
-            .filter(line => line.trim())
-            .map(line => JSON.parse(line));
+          const pendingUpdates = JSON.parse(fs.readFileSync('.github/version-updates/pending.json', 'utf8'));
 
           let updatedFeatures = [];
 
@@ -151,8 +179,8 @@ jobs:
       - name: "Clear pending updates"
         if: always()
         run: |
-          # Clear the pending updates file
-          echo "" > .github/version-updates/pending.json
+          # Clear the pending updates file to empty array
+          echo "[]" > .github/version-updates/pending.json
 
           # Commit the cleared file if needed
           if ! git diff --quiet .github/version-updates/pending.json; then
