@@ -61,22 +61,22 @@ jobs:
           if [ "${{ github.event_name }}" = "repository_dispatch" ] && [ "${{ github.event.client_payload.feature }}" != "" ]; then
             # Use node to properly append to JSON array
             cat > append_update.js << 'EOF'
-const fs = require('fs');
-const file = '.github/version-updates/pending.json';
-let updates = [];
-try {
-  const content = fs.readFileSync(file, 'utf8').trim();
-  if (content) updates = JSON.parse(content);
-} catch (e) {
-  updates = [];
-}
-EOF
+          const fs = require('fs');
+          const file = '.github/version-updates/pending.json';
+          let updates = [];
+          try {
+            const content = fs.readFileSync(file, 'utf8').trim();
+            if (content) updates = JSON.parse(content);
+          } catch (e) {
+            updates = [];
+          }
+          EOF
             echo "const newUpdate = ${{ toJson(github.event.client_payload) }};" >> append_update.js
             cat >> append_update.js << 'EOF'
-updates.push(newUpdate);
-fs.writeFileSync(file, JSON.stringify(updates, null, 2));
-console.log('Added update for:', newUpdate.feature);
-EOF
+          updates.push(newUpdate);
+          fs.writeFileSync(file, JSON.stringify(updates, null, 2));
+          console.log('Added update for:', newUpdate.feature);
+          EOF
             node append_update.js
           fi
 
