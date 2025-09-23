@@ -70,14 +70,14 @@ jobs:
           } catch (e) {
             updates = [];
           }
-          EOF
-            echo "const newUpdate = ${{ toJson(github.event.client_payload) }};" >> append_update.js
-            cat >> append_update.js << 'EOF'
+
+          // Parse the client payload from the environment variable
+          const newUpdate = JSON.parse(process.env.CLIENT_PAYLOAD);
           updates.push(newUpdate);
           fs.writeFileSync(file, JSON.stringify(updates, null, 2));
           console.log('Added update for:', newUpdate.feature);
           EOF
-            node append_update.js
+            CLIENT_PAYLOAD='${{ toJson(github.event.client_payload) }}' node append_update.js
           fi
 
           # Check if we have any pending updates
