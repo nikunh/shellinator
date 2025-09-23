@@ -27,8 +27,7 @@
     "ghcr.io/nikunh/dev-utils-vishkrm/dev-utils:0.0.6": {},
     "ghcr.io/nikunh/003-zsh-setup-vishkrm/003-zsh-setup:0.0.4": {},
     "ghcr.io/nikunh/ai-tools-vishkrm/ai-tools:0.0.13": {},
-    "ghcr.io/nikunh/babaji-config-vishkrm/babaji-config:1.0.4": {},
-    "ghcr.io/nikunh/conda-vishkrm/conda:0.0.0": {}
+    "ghcr.io/nikunh/babaji-config-vishkrm/babaji-config:1.0.4": {}
   },
   "remoteUser": "babaji",
   "containerEnv": {
@@ -39,7 +38,7 @@
     2222,
     6623
   ],
-  "postCreateCommand": "echo 'DevContainer ready! Shellinator GitHub v0.0.1 - Clean GitHub features loaded. SSH, nvim, tmux, code-server, AI tools, conda available. Browsh temporarily disabled. Use shellinator-enhance for private features.'",
+  "postCreateCommand": "echo 'DevContainer ready! Shellinator GitHub v0.0.1 - Clean GitHub features loaded. SSH, nvim, tmux, code-server, AI tools available. Browsh and conda temporarily disabled. Use shellinator-enhance for private features.'",
   "customizations": {
     "vscode": {
       "extensions": [
