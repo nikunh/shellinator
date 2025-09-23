@@ -20,14 +20,14 @@
     "ghcr.io/nikunh/luarocks-vishkrm/luarocks:0.0.3": {},
     "ghcr.io/nikunh/nushell-vishkrm/nushell:0.0.3": {},
     "ghcr.io/nikunh/devops-tools-vishkrm/devops-tools:0.0.3": {},
-    "ghcr.io/nikunh/k8s-utilities-vishkrm/k8s-utilities:0.0.3": {},
     "ghcr.io/nikunh/k9s-vishkrm/k9s:0.0.3": {},
     "ghcr.io/nikunh/sops-vishkrm/sops:0.0.3": {},
     "ghcr.io/nikunh/jq-likes-vishkrm/jq-likes:0.0.3": {},
     "ghcr.io/nikunh/code-server-vishkrm/code-server:0.0.3": {},
     "ghcr.io/nikunh/002-user-setup-vishkrm/002-user-setup:0.0.14": {},
     "ghcr.io/nikunh/aider-vishkrm/aider:0.0.5": {},
-    "ghcr.io/nikunh/cloudflared-vishkrm/cloudflared:0.0.4": {}
+    "ghcr.io/nikunh/cloudflared-vishkrm/cloudflared:0.0.4": {},
+    "ghcr.io/nikunh/k8s-utilities-vishkrm/k8s-utilities:0.0.4": {}
   },
   "remoteUser": "babaji",
   "containerEnv": {
