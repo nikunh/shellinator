@@ -24,10 +24,10 @@
     "ghcr.io/nikunh/jq-likes-vishkrm/jq-likes:0.0.4": {},
     "ghcr.io/nikunh/code-server-vishkrm/code-server:0.0.4": {},
     "ghcr.io/nikunh/dev-utils-vishkrm/dev-utils:0.0.6": {},
-    "ghcr.io/nikunh/003-zsh-setup-vishkrm/003-zsh-setup:0.0.4": {},
     "ghcr.io/nikunh/tmux-neovim-git-vishkrm/tmux-neovim-git:0.0.17": {},
     "ghcr.io/nikunh/babaji-config-vishkrm/babaji-config:1.0.7": {},
-    "ghcr.io/nikunh/ai-tools-vishkrm/ai-tools:0.0.15": {}
+    "ghcr.io/nikunh/ai-tools-vishkrm/ai-tools:0.0.15": {},
+    "ghcr.io/nikunh/003-zsh-setup-vishkrm/003-zsh-setup:0.0.5": {}
   },
   "remoteUser": "babaji",
   "containerEnv": {
