@@ -26,8 +26,8 @@
     "ghcr.io/nikunh/tmux-neovim-git-vishkrm/tmux-neovim-git:0.0.17": {},
     "ghcr.io/nikunh/ai-tools-vishkrm/ai-tools:0.0.15": {},
     "ghcr.io/nikunh/003-zsh-setup-vishkrm/003-zsh-setup:0.0.10": {},
-    "ghcr.io/nikunh/dev-utils-vishkrm/dev-utils:0.0.9": {},
-    "ghcr.io/nikunh/babaji-config-vishkrm/babaji-config:1.0.10": {}
+    "ghcr.io/nikunh/babaji-config-vishkrm/babaji-config:1.0.10": {},
+    "ghcr.io/nikunh/dev-utils-vishkrm/dev-utils:0.0.10": {}
   },
   "remoteUser": "babaji",
   "containerEnv": {
