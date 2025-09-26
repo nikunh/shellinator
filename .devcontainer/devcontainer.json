@@ -27,7 +27,7 @@
     "ghcr.io/nikunh/003-zsh-setup-vishkrm/003-zsh-setup:0.0.10": {},
     "ghcr.io/nikunh/babaji-config-vishkrm/babaji-config:1.0.10": {},
     "ghcr.io/nikunh/dev-utils-vishkrm/dev-utils:0.0.10": {},
-    "ghcr.io/nikunh/002-user-setup-vishkrm/002-user-setup:0.0.15": {}
+    "ghcr.io/nikunh/002-user-setup-vishkrm/002-user-setup:0.0.16": {}
   },
   "remoteUser": "babaji",
   "containerEnv": {
