@@ -1,1 +1,12 @@
-[]
+[
+  {
+    "feature": "nas-connector-vishkrm/nas-connector",
+    "version": "0.0.6",
+    "old_version": "0.0.3",
+    "repository": "nikunh/nas-connector-vishkrm",
+    "commit_sha": "a0da1531b3c039ee14c4f3d80cf9c53296598186",
+    "verified": true,
+    "timestamp": "2025-09-26T20:26:00Z",
+    "target_branch": "vishkrm"
+  }
+]
