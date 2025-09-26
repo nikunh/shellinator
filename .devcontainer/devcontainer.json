@@ -39,7 +39,7 @@
     2222,
     6623
   ],
-  "postCreateCommand": "echo 'DevContainer ready! Shellinator GitHub v0.0.1 - Clean GitHub features loaded. SSH, nvim, tmux, code-server, AI tools available. Browsh and conda temporarily disabled. Use shellinator-enhance for private features.'",
+  "postCreateCommand": "/usr/local/bin/setup-workspace-link && echo 'DevContainer ready! Shellinator GitHub v0.0.1 - Clean GitHub features loaded. SSH, nvim, tmux, code-server, AI tools available. Browsh and conda temporarily disabled. Use shellinator-enhance for private features.'",
   "customizations": {
     "vscode": {
       "extensions": [
