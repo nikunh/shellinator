@@ -27,11 +27,16 @@ jobs:
     permissions:
       contents: write
       actions: read
+    strategy:
+      matrix:
+        branch: [master, vishkrm]
+      fail-fast: false  # Continue with other branches if one fails
 
     steps:
       - name: "Checkout shellinator repository"
         uses: actions/checkout@v4
         with:
+          ref: ${{ matrix.branch }}
           token: ${{ secrets.GITHUB_TOKEN }}
           fetch-depth: 0
 
@@ -171,7 +176,7 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
           # Create commit message
-          echo "Auto-update feature versions" > commit_msg.txt
+          echo "Auto-update feature versions [${{ matrix.branch }}]" > commit_msg.txt
           echo "" >> commit_msg.txt
           if [ -f update_summary.txt ]; then
             cat update_summary.txt >> commit_msg.txt
@@ -184,9 +189,9 @@ jobs:
           # Commit and push
           git add .devcontainer/devcontainer.json
           git commit -F commit_msg.txt
-          git push
+          git push origin ${{ matrix.branch }}
 
-          echo "✅ Successfully updated devcontainer.json"
+          echo "✅ Successfully updated devcontainer.json for ${{ matrix.branch }} branch"
 
       - name: "Clear pending updates"
         if: always()
