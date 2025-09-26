@@ -127,6 +127,12 @@ jobs:
           for (const update of pendingUpdates) {
             if (!update.feature || !update.version) continue;
 
+            // Skip updates that specify a target branch different from current branch
+            if (update.target_branch && update.target_branch !== process.env.GITHUB_REF_NAME) {
+              console.log(`Skipping ${update.feature} - targets ${update.target_branch}, current branch is ${process.env.GITHUB_REF_NAME}`);
+              continue;
+            }
+
             const featureName = `ghcr.io/nikunh/${update.feature}`;
 
             // Find and update the feature version
@@ -161,7 +167,7 @@ jobs:
           EOF
 
           # Run the update script
-          node update_devcontainer.js
+          GITHUB_REF_NAME=${{ matrix.branch }} node update_devcontainer.js
 
       - name: "Commit and push updates"
         run: |
