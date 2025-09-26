@@ -28,7 +28,7 @@
     "ghcr.io/nikunh/003-zsh-setup-vishkrm/003-zsh-setup:0.0.10": {},
     "ghcr.io/nikunh/babaji-config-vishkrm/babaji-config:1.0.12": {},
     "ghcr.io/nikunh/dev-utils-vishkrm/dev-utils:0.0.10": {},
-    "ghcr.io/nikunh/nas-connector-vishkrm/nas-connector:0.0.3": {}
+    "ghcr.io/nikunh/nas-connector-vishkrm/nas-connector:0.0.6": {}
   },
   "remoteUser": "babaji",
   "runArgs": [
