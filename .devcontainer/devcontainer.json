@@ -32,8 +32,7 @@
   },
   "remoteUser": "babaji",
   "runArgs": [
-    "--cap-add=SYS_ADMIN",
-    "--device=/dev/fuse"
+    "--privileged"
   ],
   "containerEnv": {
     "HOME": "/home/babaji",
