@@ -28,7 +28,7 @@
     "ghcr.io/nikunh/babaji-config-vishkrm/babaji-config:1.0.12": {},
     "ghcr.io/nikunh/dev-utils-vishkrm/dev-utils:0.0.10": {},
     "ghcr.io/nikunh/nas-connector-vishkrm/nas-connector:0.0.10": {},
-    "ghcr.io/nikunh/ai-tools-vishkrm/ai-tools:0.0.18": {}
+    "ghcr.io/nikunh/ai-tools-vishkrm/ai-tools:0.0.19": {}
   },
   "remoteUser": "babaji",
   "runArgs": [
