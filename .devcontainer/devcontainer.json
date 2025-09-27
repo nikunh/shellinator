@@ -28,7 +28,7 @@
     "ghcr.io/nikunh/dev-utils-vishkrm/dev-utils:0.0.10": {},
     "ghcr.io/nikunh/nas-connector-vishkrm/nas-connector:0.0.10": {},
     "ghcr.io/nikunh/ai-tools-vishkrm/ai-tools:0.0.21": {},
-    "ghcr.io/nikunh/tmux-neovim-git-vishkrm/tmux-neovim-git:0.0.21": {}
+    "ghcr.io/nikunh/tmux-neovim-git-vishkrm/tmux-neovim-git:0.0.22": {}
   },
   "remoteUser": "babaji",
   "runArgs": [
