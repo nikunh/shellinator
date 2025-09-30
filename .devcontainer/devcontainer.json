@@ -30,8 +30,7 @@
     "ghcr.io/nikunh/tmux-neovim-git-vishkrm/tmux-neovim-git:0.0.2": {},
     "ghcr.io/nikunh/nushell-vishkrm/nushell:0.0.2": {},
     "ghcr.io/nikunh/conda-vishkrm/conda:0.0.2": {},
-    "ghcr.io/nikunh/browsh-vishkrm/browsh:0.0.2": {},
-    "ghcr.io/nikunh/shellinator-dotfiles-vishkrm/shellinator-dotfiles:0.0.2": {}
+    "ghcr.io/nikunh/browsh-vishkrm/browsh:0.0.2": {}
   },
   "remoteUser": "babaji",
   "runArgs": [
