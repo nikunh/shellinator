@@ -29,19 +29,19 @@
     "ghcr.io/nikunh/tmux-neovim-git-vishkrm/tmux-neovim-git:0.0.2": {},
     "ghcr.io/nikunh/nushell-vishkrm/nushell:0.0.2": {},
     "ghcr.io/nikunh/conda-vishkrm/conda:0.0.2": {},
-    "ghcr.io/nikunh/browsh-vishkrm/browsh:0.0.2": {}
+    "ghcr.io/nikunh/browsh-vishkrm/browsh:0.0.3": {}
   },
   "remoteUser": "babaji",
   "runArgs": [
     "--privileged"
   ],
-   "mounts": [
-  {
-       "source": "${env:HOME}/babaji",
-       "target": "/home/babaji",
-       "type": "bind"
-     }
-   ],
+  "mounts": [
+    {
+      "source": "${env:HOME}/babaji",
+      "target": "/home/babaji",
+      "type": "bind"
+    }
+  ],
   "containerEnv": {
     "HOME": "/home/babaji",
     "SSH_TARGET_PORT": "${localEnv:SSH_TARGET_PORT:2222}"
