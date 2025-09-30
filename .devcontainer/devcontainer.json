@@ -1,0 +1,84 @@
+{
+  "name": "Shellinator DevPod Environment - GitHub v0.0.1 Full Features",
+  "image": "ubuntu:22.04",
+  "features": {
+    "ghcr.io/nikunh/001-dev-packages-vishkrm/001-dev-packages:0.0.1": {},
+    "ghcr.io/devcontainers/features/git:1": {},
+    "ghcr.io/devcontainers/features/go:1": {},
+    "ghcr.io/devcontainers/features/sshd:1": {
+      "version": "latest"
+    },
+    "ghcr.io/nikunh/002-user-setup-vishkrm/002-user-setup:0.0.1": {},
+    "ghcr.io/nikunh/aider-vishkrm/aider:0.0.1": {},
+    "ghcr.io/nikunh/cloudflared-vishkrm/cloudflared:0.0.1": {},
+    "ghcr.io/nikunh/k8s-utilities-vishkrm/k8s-utilities:0.0.1": {},
+    "ghcr.io/nikunh/jq-likes-vishkrm/jq-likes:0.0.1": {},
+    "ghcr.io/nikunh/code-server-vishkrm/code-server:0.0.1": {},
+    "ghcr.io/nikunh/babaji-config-vishkrm/babaji-config:0.0.1": {},
+    "ghcr.io/nikunh/dev-utils-vishkrm/dev-utils:0.0.1": {},
+    "ghcr.io/nikunh/nas-connector-vishkrm/nas-connector:0.0.1": {},
+    "ghcr.io/nikunh/ai-tools-vishkrm/ai-tools:0.0.1": {},
+    "ghcr.io/nikunh/git-tools-vishkrm/git-tools:0.0.1": {},
+    "ghcr.io/nikunh/go-env-vishkrm/go-env:0.0.1": {},
+    "ghcr.io/nikunh/dev-tools-additions-vishkrm/dev-tools-additions:0.0.1": {},
+    "ghcr.io/nikunh/node-env-vishkrm/node-env:0.0.1": {},
+    "ghcr.io/nikunh/luarocks-vishkrm/luarocks:0.0.1": {},
+    "ghcr.io/nikunh/devops-tools-vishkrm/devops-tools:0.0.1": {},
+    "ghcr.io/nikunh/k9s-vishkrm/k9s:0.0.1": {},
+    "ghcr.io/nikunh/sops-vishkrm/sops:0.0.1": {},
+    "ghcr.io/nikunh/003-zsh-setup-vishkrm/003-zsh-setup:0.0.1": {},
+    "ghcr.io/nikunh/tmux-neovim-git-vishkrm/tmux-neovim-git:0.0.1": {},
+    "ghcr.io/nikunh/nushell-vishkrm/nushell:0.0.1": {},
+    "ghcr.io/nikunh/conda-vishkrm/conda:0.0.1": {},
+    "ghcr.io/nikunh/browsh-vishkrm/browsh:0.0.1": {},
+    "ghcr.io/nikunh/shellinator-dotfiles-vishkrm/shellinator-dotfiles:0.0.1": {}
+  },
+  "remoteUser": "babaji",
+  "runArgs": [
+    "--privileged"
+  ],
+   "mounts": [
+  {
+       "source": "${env:HOME}/babaji",
+       "target": "/home/babaji",
+       "type": "bind"
+     }
+   ],
+  "containerEnv": {
+    "HOME": "/home/babaji",
+    "SSH_TARGET_PORT": "${localEnv:SSH_TARGET_PORT:2222}"
+  },
+  "forwardPorts": [
+    2222,
+    6623
+  ],
+  "postCreateCommand": "/usr/local/bin/setup-workspace-link && echo 'DevContainer ready! Shellinator GitHub v0.0.1 - Clean GitHub features loaded. SSH, nvim, tmux, code-server, AI tools available. Browsh and conda temporarily disabled. Use shellinator-enhance for private features.'",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "ms-toolsai.jupyter",
+        "ms-python.debugpy",
+        "visualstudioexptteam.vscodeintellicode",
+        "github.copilot",
+        "github.copilot-chat",
+        "saoudrizwan.claude-dev",
+        "formulahendry.code-runner",
+        "ms-python.isort",
+        "mtxr.sqltools",
+        "mtxr.sqltools-driver-mysql",
+        "mtxr.sqltools-driver-sqlite",
+        "cweijan.vscode-mysql-client2",
+        "ms-azuretools.vscode-docker",
+        "redhat.vscode-yaml",
+        "esbenp.prettier-vscode",
+        "ms-vscode.makefile-tools",
+        "continue.continue",
+        "ex-human.model-context",
+        "ms-kubernetes-tools.vscode-kubernetes-tools"
+      ],
+      "settings": {}
+    }
+  }
+}

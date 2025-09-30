@@ -1,0 +1,217 @@
+name: "Batch Feature Version Updates"
+
+on:
+  repository_dispatch:
+    types: [feature_version_update, force_update_now]
+  workflow_dispatch:
+    inputs:
+      force_all:
+        description: 'Force update all features to latest versions'
+        type: boolean
+        default: false
+      feature_filter:
+        description: 'Only update specific feature (optional)'
+        required: false
+        default: ''
+  schedule:
+    - cron: '0 0 1 * *'  # Monthly on the 1st at midnight UTC
+  push:
+    branches:
+      - main
+    paths:
+      - '.github/workflows/batch-version-updates.yml'
+
+jobs:
+  update_devcontainer:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      actions: read
+    strategy:
+      matrix:
+        branch: [main, vishkrm]
+      fail-fast: false  # Continue with other branches if one fails
+
+    steps:
+      - name: "Checkout shellinator repository"
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ matrix.branch }}
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
+
+      - name: "Setup Node.js for JSON processing"
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: "Collect pending feature updates"
+        id: collect_updates
+        run: |
+          echo "Collecting feature version updates..."
+
+          if [ "${{ github.event_name }}" = "push" ]; then
+            echo "🔧 Workflow triggered by push event - testing workflow functionality"
+          fi
+
+          # Create update tracking file if it doesn't exist
+          mkdir -p .github/version-updates
+
+          # Initialize as empty JSON array if file doesn't exist or is empty
+          if [ ! -f .github/version-updates/pending.json ] || [ ! -s .github/version-updates/pending.json ]; then
+            echo "[]" > .github/version-updates/pending.json
+          fi
+
+          # Add current event to pending updates (if triggered by dispatch and has payload)
+          if [ "${{ github.event_name }}" = "repository_dispatch" ] && [ "${{ github.event.client_payload.feature }}" != "" ]; then
+            # Use node to properly append to JSON array
+            cat > append_update.js << 'EOF'
+          const fs = require('fs');
+          const file = '.github/version-updates/pending.json';
+          let updates = [];
+          try {
+            const content = fs.readFileSync(file, 'utf8').trim();
+            if (content) updates = JSON.parse(content);
+          } catch (e) {
+            updates = [];
+          }
+
+          // Parse the client payload from the environment variable
+          const newUpdate = JSON.parse(process.env.CLIENT_PAYLOAD);
+          updates.push(newUpdate);
+          fs.writeFileSync(file, JSON.stringify(updates, null, 2));
+          console.log('Added update for:', newUpdate.feature);
+          EOF
+            CLIENT_PAYLOAD='${{ toJson(github.event.client_payload) }}' node append_update.js
+          fi
+
+          # Check if we have any pending updates
+          UPDATE_COUNT=$(node -e "
+            const fs = require('fs');
+            try {
+              const updates = JSON.parse(fs.readFileSync('.github/version-updates/pending.json', 'utf8'));
+              console.log(updates.length);
+            } catch (e) {
+              console.log(0);
+            }
+          ")
+
+          if [ "$UPDATE_COUNT" -gt 0 ]; then
+            echo "has_updates=true" >> $GITHUB_OUTPUT
+            echo "Found $UPDATE_COUNT pending updates"
+          else
+            echo "has_updates=false" >> $GITHUB_OUTPUT
+            echo "No pending updates"
+          fi
+
+      - name: "Process version updates"
+        if: steps.collect_updates.outputs.has_updates == 'true'
+        run: |
+          echo "Processing devcontainer.json updates..."
+
+          # Create a Node.js script to update the JSON safely
+          cat > update_devcontainer.js << 'EOF'
+          const fs = require('fs');
+          const path = require('path');
+
+          // Read current devcontainer.json
+          const devcontainerPath = '.devcontainer/devcontainer.json';
+          const devcontainer = JSON.parse(fs.readFileSync(devcontainerPath, 'utf8'));
+
+          // Read pending updates
+          const pendingUpdates = JSON.parse(fs.readFileSync('.github/version-updates/pending.json', 'utf8'));
+
+          let updatedFeatures = [];
+
+          // Apply updates
+          for (const update of pendingUpdates) {
+            if (!update.feature || !update.version) continue;
+
+            // Skip updates that specify a target branch different from current branch
+            if (update.target_branch && update.target_branch !== process.env.GITHUB_REF_NAME) {
+              console.log(`Skipping ${update.feature} - targets ${update.target_branch}, current branch is ${process.env.GITHUB_REF_NAME}`);
+              continue;
+            }
+
+            const featureName = `ghcr.io/nikunh/${update.feature}`;
+
+            // Find and update the feature version
+            for (const [key, value] of Object.entries(devcontainer.features)) {
+              if (key.startsWith(featureName + ':')) {
+                const oldKey = key;
+                const newKey = key.replace(/:[\d.]+$/, `:${update.version}`);
+
+                if (oldKey !== newKey) {
+                  // Update the version
+                  devcontainer.features[newKey] = devcontainer.features[oldKey];
+                  delete devcontainer.features[oldKey];
+                  updatedFeatures.push(`${update.feature}: ${oldKey.split(':').pop()} → ${update.version}`);
+                  console.log(`Updated ${update.feature}: ${oldKey.split(':').pop()} → ${update.version}`);
+                }
+                break;
+              }
+            }
+          }
+
+          if (updatedFeatures.length > 0) {
+            // Write updated devcontainer.json
+            fs.writeFileSync(devcontainerPath, JSON.stringify(devcontainer, null, 2) + '\n');
+
+            // Write summary for commit message
+            fs.writeFileSync('update_summary.txt', updatedFeatures.join('\n'));
+
+            console.log(`Updated ${updatedFeatures.length} features`);
+          } else {
+            console.log('No features needed updating');
+          }
+          EOF
+
+          # Run the update script
+          GITHUB_REF_NAME=${{ matrix.branch }} node update_devcontainer.js
+
+      - name: "Commit and push updates"
+        run: |
+          # Check if there are any changes
+          if git diff --quiet .devcontainer/devcontainer.json; then
+            echo "No changes to commit"
+            exit 0
+          fi
+
+          # Configure git
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          # Create commit message
+          echo "Auto-update feature versions [${{ matrix.branch }}]" > commit_msg.txt
+          echo "" >> commit_msg.txt
+          if [ -f update_summary.txt ]; then
+            cat update_summary.txt >> commit_msg.txt
+          fi
+          echo "" >> commit_msg.txt
+          echo "🤖 Generated with [Claude Code](https://claude.ai/code)" >> commit_msg.txt
+          echo "" >> commit_msg.txt
+          echo "Co-Authored-By: Claude <noreply@anthropic.com>" >> commit_msg.txt
+
+          # Commit and push
+          git add .devcontainer/devcontainer.json
+          git commit -F commit_msg.txt
+          git push origin ${{ matrix.branch }}
+
+          echo "✅ Successfully updated devcontainer.json for ${{ matrix.branch }} branch"
+
+      - name: "Clear pending updates"
+        if: always()
+        run: |
+          # Clear the pending updates file to empty array
+          echo "[]" > .github/version-updates/pending.json
+
+          # Commit the cleared file if needed
+          if ! git diff --quiet .github/version-updates/pending.json; then
+            # Configure git for this commit
+            git config user.name "github-actions[bot]"
+            git config user.email "github-actions[bot]@users.noreply.github.com"
+
+            git add .github/version-updates/pending.json
+            git commit -m "Clear processed version updates"
+            git push
+          fi
