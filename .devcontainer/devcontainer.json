@@ -35,13 +35,6 @@
   "runArgs": [
     "--privileged"
   ],
-  "mounts": [
-    {
-      "source": "${env:HOME}/babaji",
-      "target": "/home/babaji",
-      "type": "bind"
-    }
-  ],
   "containerEnv": {
     "HOME": "/home/babaji",
     "SSH_TARGET_PORT": "${localEnv:SSH_TARGET_PORT:2222}"
