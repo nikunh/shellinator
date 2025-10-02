@@ -28,7 +28,7 @@
     "ghcr.io/nikunh/nushell-vishkrm/nushell:0.0.2": {},
     "ghcr.io/nikunh/browsh-vishkrm/browsh:0.0.3": {},
     "ghcr.io/nikunh/babaji-config-vishkrm/babaji-config:0.0.3": {},
-    "ghcr.io/nikunh/001-dev-packages-vishkrm/001-dev-packages:0.0.3": {}
+    "ghcr.io/nikunh/001-dev-packages-vishkrm/001-dev-packages:0.0.4": {}
   },
   "remoteUser": "babaji",
   "runArgs": [
