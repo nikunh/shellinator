@@ -2,7 +2,6 @@
   "name": "Shellinator DevPod Environment - GitHub v0.0.1 Full Features",
   "image": "ubuntu:22.04",
   "features": {
-    "ghcr.io/nikunh/001-dev-packages-vishkrm/001-dev-packages:0.0.2": {},
     "ghcr.io/devcontainers/features/git:1": {},
     "ghcr.io/devcontainers/features/go:1": {},
     "ghcr.io/devcontainers/features/sshd:1": {
@@ -28,7 +27,8 @@
     "ghcr.io/nikunh/tmux-neovim-git-vishkrm/tmux-neovim-git:0.0.2": {},
     "ghcr.io/nikunh/nushell-vishkrm/nushell:0.0.2": {},
     "ghcr.io/nikunh/browsh-vishkrm/browsh:0.0.3": {},
-    "ghcr.io/nikunh/babaji-config-vishkrm/babaji-config:0.0.3": {}
+    "ghcr.io/nikunh/babaji-config-vishkrm/babaji-config:0.0.3": {},
+    "ghcr.io/nikunh/001-dev-packages-vishkrm/001-dev-packages:0.0.3": {}
   },
   "remoteUser": "babaji",
   "runArgs": [
