@@ -29,7 +29,7 @@
     "ghcr.io/nikunh/browsh-vishkrm/browsh:0.0.3": {},
     "ghcr.io/nikunh/babaji-config-vishkrm/babaji-config:0.0.3": {},
     "ghcr.io/nikunh/nas-connector-vishkrm/nas-connector:0.0.3": {},
-    "ghcr.io/nikunh/001-dev-packages-vishkrm/001-dev-packages:0.0.7": {}
+    "ghcr.io/nikunh/001-dev-packages-vishkrm/001-dev-packages:0.0.8": {}
   },
   "remoteUser": "babaji",
   "runArgs": [
