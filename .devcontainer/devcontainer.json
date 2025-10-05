@@ -17,7 +17,6 @@
     "ghcr.io/nikunh/luarocks-vishkrm/luarocks:0.0.2": {},
     "ghcr.io/nikunh/devops-tools-vishkrm/devops-tools:0.0.2": {},
     "ghcr.io/nikunh/k9s-vishkrm/k9s:0.0.2": {},
-    "ghcr.io/nikunh/003-zsh-setup-vishkrm/003-zsh-setup:0.0.2": {},
     "ghcr.io/nikunh/tmux-neovim-git-vishkrm/tmux-neovim-git:0.0.2": {},
     "ghcr.io/nikunh/nushell-vishkrm/nushell:0.0.2": {},
     "ghcr.io/nikunh/browsh-vishkrm/browsh:0.0.3": {},
@@ -29,7 +28,8 @@
     "ghcr.io/nikunh/sops-vishkrm/sops:0.0.3": {},
     "ghcr.io/nikunh/nas-connector-vishkrm/nas-connector:0.0.4": {},
     "ghcr.io/nikunh/babaji-config-vishkrm/babaji-config:0.0.9": {},
-    "ghcr.io/nikunh/002-user-setup-vishkrm/002-user-setup:0.0.4": {}
+    "ghcr.io/nikunh/002-user-setup-vishkrm/002-user-setup:0.0.4": {},
+    "ghcr.io/nikunh/003-zsh-setup-vishkrm/003-zsh-setup:0.0.4": {}
   },
   "remoteUser": "babaji",
   "runArgs": [
