@@ -7,7 +7,6 @@
     "ghcr.io/devcontainers/features/sshd:1": {
       "version": "latest"
     },
-    "ghcr.io/nikunh/002-user-setup-vishkrm/002-user-setup:0.0.2": {},
     "ghcr.io/nikunh/aider-vishkrm/aider:0.0.2": {},
     "ghcr.io/nikunh/cloudflared-vishkrm/cloudflared:0.0.2": {},
     "ghcr.io/nikunh/k8s-utilities-vishkrm/k8s-utilities:0.0.2": {},
@@ -28,7 +27,8 @@
     "ghcr.io/nikunh/node-env-vishkrm/node-env:0.0.3": {},
     "ghcr.io/nikunh/go-env-vishkrm/go-env:0.0.3": {},
     "ghcr.io/nikunh/tmux-neovim-git-vishkrm/tmux-neovim-git:0.0.3": {},
-    "ghcr.io/nikunh/babaji-config-vishkrm/babaji-config:0.0.9": {}
+    "ghcr.io/nikunh/babaji-config-vishkrm/babaji-config:0.0.9": {},
+    "ghcr.io/nikunh/002-user-setup-vishkrm/002-user-setup:0.0.4": {}
   },
   "remoteUser": "babaji",
   "runArgs": [
