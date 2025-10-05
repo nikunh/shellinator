@@ -26,10 +26,10 @@
     "ghcr.io/nikunh/node-env-vishkrm/node-env:0.0.3": {},
     "ghcr.io/nikunh/sops-vishkrm/sops:0.0.3": {},
     "ghcr.io/nikunh/nas-connector-vishkrm/nas-connector:0.0.4": {},
-    "ghcr.io/nikunh/babaji-config-vishkrm/babaji-config:0.0.9": {},
     "ghcr.io/nikunh/002-user-setup-vishkrm/002-user-setup:0.0.4": {},
     "ghcr.io/nikunh/003-zsh-setup-vishkrm/003-zsh-setup:0.0.4": {},
-    "ghcr.io/nikunh/001-dev-packages-vishkrm/001-dev-packages:0.0.15": {}
+    "ghcr.io/nikunh/001-dev-packages-vishkrm/001-dev-packages:0.0.15": {},
+    "ghcr.io/nikunh/babaji-config-vishkrm/babaji-config:0.0.10": {}
   },
   "remoteUser": "babaji",
   "runArgs": [
