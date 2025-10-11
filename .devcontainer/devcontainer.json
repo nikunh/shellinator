@@ -30,7 +30,7 @@
     "ghcr.io/nikunh/003-zsh-setup-vishkrm/003-zsh-setup:0.0.4": {},
     "ghcr.io/nikunh/001-dev-packages-vishkrm/001-dev-packages:0.0.15": {},
     "ghcr.io/nikunh/babaji-config-vishkrm/babaji-config:0.0.10": {},
-    "ghcr.io/nikunh/devpod-agent-vishkrm/devpod-agent:0.0.3": {}
+    "ghcr.io/nikunh/devpod-agent-vishkrm/devpod-agent:0.0.4": {}
   },
   "remoteUser": "babaji",
   "runArgs": [
