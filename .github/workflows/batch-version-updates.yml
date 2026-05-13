@@ -21,6 +21,13 @@ on:
     paths:
       - '.github/workflows/batch-version-updates.yml'
 
+# Serialize runs to prevent the concurrency race documented in worklog issue I1
+# (multiple dispatches hitting the same pending.json + git push, losing updates).
+# Queue (cancel-in-progress: false) so every payload is processed.
+concurrency:
+  group: batch-version-updates
+  cancel-in-progress: false
+
 jobs:
   update_devcontainer:
     runs-on: ubuntu-latest
