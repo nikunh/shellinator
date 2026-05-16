@@ -13,7 +13,6 @@
     "ghcr.io/nikunh/jq-likes-vishkrm/jq-likes:0.0.2": {},
     "ghcr.io/nikunh/dev-utils-vishkrm/dev-utils:0.0.2": {},
     "ghcr.io/nikunh/go-env-vishkrm/go-env:0.0.2": {},
-    "ghcr.io/nikunh/dev-tools-additions-vishkrm/dev-tools-additions:0.0.2": {},
     "ghcr.io/nikunh/luarocks-vishkrm/luarocks:0.0.2": {},
     "ghcr.io/nikunh/devops-tools-vishkrm/devops-tools:0.0.2": {},
     "ghcr.io/nikunh/k9s-vishkrm/k9s:0.0.2": {},
@@ -30,7 +29,8 @@
     "ghcr.io/nikunh/devpod-agent-vishkrm/devpod-agent:0.0.4": {},
     "ghcr.io/nikunh/001-dev-packages-vishkrm/001-dev-packages:0.0.15": {},
     "ghcr.io/nikunh/babaji-config-vishkrm/babaji-config:0.0.10": {},
-    "ghcr.io/nikunh/tmux-neovim-git-vishkrm/tmux-neovim-git:0.0.4": {}
+    "ghcr.io/nikunh/tmux-neovim-git-vishkrm/tmux-neovim-git:0.0.4": {},
+    "ghcr.io/nikunh/dev-tools-additions-vishkrm/dev-tools-additions:0.0.4": {}
   },
   "remoteUser": "babaji",
   "runArgs": [
