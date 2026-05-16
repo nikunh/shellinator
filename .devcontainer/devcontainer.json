@@ -7,7 +7,6 @@
     "ghcr.io/devcontainers/features/sshd:1": {
       "version": "latest"
     },
-    "ghcr.io/nikunh/aider-vishkrm/aider:0.0.2": {},
     "ghcr.io/nikunh/cloudflared-vishkrm/cloudflared:0.0.2": {},
     "ghcr.io/nikunh/k8s-utilities-vishkrm/k8s-utilities:0.0.2": {},
     "ghcr.io/nikunh/code-server-vishkrm/code-server:0.0.2": {},
@@ -28,7 +27,8 @@
     "ghcr.io/nikunh/tmux-neovim-git-vishkrm/tmux-neovim-git:0.0.4": {},
     "ghcr.io/nikunh/dev-tools-additions-vishkrm/dev-tools-additions:0.0.4": {},
     "ghcr.io/nikunh/jq-likes-vishkrm/jq-likes:0.0.4": {},
-    "ghcr.io/nikunh/node-env-vishkrm/node-env:0.0.4": {}
+    "ghcr.io/nikunh/node-env-vishkrm/node-env:0.0.4": {},
+    "ghcr.io/nikunh/aider-vishkrm/aider:0.0.4": {}
   },
   "remoteUser": "babaji",
   "runArgs": [
