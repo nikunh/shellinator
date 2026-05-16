@@ -20,7 +20,6 @@
     "ghcr.io/nikunh/code-server-vishkrm/code-server:0.0.3": {},
     "ghcr.io/nikunh/ai-tools-vishkrm/ai-tools:0.0.3": {},
     "ghcr.io/nikunh/git-tools-vishkrm/git-tools:0.0.3": {},
-    "ghcr.io/nikunh/node-env-vishkrm/node-env:0.0.3": {},
     "ghcr.io/nikunh/sops-vishkrm/sops:0.0.3": {},
     "ghcr.io/nikunh/nas-connector-vishkrm/nas-connector:0.0.4": {},
     "ghcr.io/nikunh/002-user-setup-vishkrm/002-user-setup:0.0.4": {},
@@ -30,7 +29,8 @@
     "ghcr.io/nikunh/babaji-config-vishkrm/babaji-config:0.0.10": {},
     "ghcr.io/nikunh/tmux-neovim-git-vishkrm/tmux-neovim-git:0.0.4": {},
     "ghcr.io/nikunh/dev-tools-additions-vishkrm/dev-tools-additions:0.0.4": {},
-    "ghcr.io/nikunh/jq-likes-vishkrm/jq-likes:0.0.4": {}
+    "ghcr.io/nikunh/jq-likes-vishkrm/jq-likes:0.0.4": {},
+    "ghcr.io/nikunh/node-env-vishkrm/node-env:0.0.4": {}
   },
   "remoteUser": "babaji",
   "runArgs": [
