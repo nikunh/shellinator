@@ -30,12 +30,12 @@
     "ghcr.io/nikunh/k8s-utilities-vishkrm/k8s-utilities:0.0.4": {},
     "ghcr.io/nikunh/ai-tools-vishkrm/ai-tools:0.0.4": {}
   },
-  "remoteUser": "babaji",
+  "remoteUser": "vishkrm",
   "runArgs": [
     "--privileged"
   ],
   "containerEnv": {
-    "HOME": "/home/babaji",
+    "HOME": "/home/vishkrm",
     "SSH_TARGET_PORT": "${localEnv:SSH_TARGET_PORT:2222}"
   },
   "forwardPorts": [
