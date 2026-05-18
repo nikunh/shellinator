@@ -24,7 +24,7 @@
     "ghcr.io/nikunh/dev-utils-vishkrm/dev-utils:0.0.4": {},
     "ghcr.io/nikunh/go-env-vishkrm/go-env:0.0.5": {},
     "ghcr.io/nikunh/k8s-utilities-vishkrm/k8s-utilities:0.0.6": {},
-    "ghcr.io/nikunh/nas-connector-vishkrm/nas-connector:0.0.14": {},
+    "ghcr.io/nikunh/nas-connector-vishkrm/nas-connector:0.0.15": {},
     "ghcr.io/nikunh/gui-server-vishkrm/gui-server:0.0.2": {},
     "ghcr.io/nikunh/nushell-vishkrm/nushell:0.0.4": {},
     "ghcr.io/nikunh/sops-vishkrm/sops:0.0.4": {},
