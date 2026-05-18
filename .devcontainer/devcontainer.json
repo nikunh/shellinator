@@ -29,8 +29,8 @@
     "ghcr.io/nikunh/002-user-setup-vishkrm/002-user-setup:0.0.6": {},
     "ghcr.io/nikunh/tmux-neovim-git-vishkrm/tmux-neovim-git:0.0.7": {},
     "ghcr.io/nikunh/001-dev-packages-vishkrm/001-dev-packages:0.0.17": {},
-    "ghcr.io/nikunh/nas-connector-vishkrm/nas-connector:0.0.11": {},
-    "ghcr.io/nikunh/ai-tools-vishkrm/ai-tools:0.0.8": {}
+    "ghcr.io/nikunh/ai-tools-vishkrm/ai-tools:0.0.8": {},
+    "ghcr.io/nikunh/nas-connector-vishkrm/nas-connector:0.0.12": {}
   },
   "remoteUser": "vishkrm",
   "runArgs": [
