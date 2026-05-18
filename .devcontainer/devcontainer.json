@@ -26,9 +26,9 @@
     "ghcr.io/nikunh/001-dev-packages-vishkrm/001-dev-packages:0.0.17": {},
     "ghcr.io/nikunh/ai-tools-vishkrm/ai-tools:0.0.8": {},
     "ghcr.io/nikunh/devops-tools-vishkrm/devops-tools:0.0.4": {},
-    "ghcr.io/nikunh/aider-vishkrm/aider:0.0.5": {},
     "ghcr.io/nikunh/k8s-utilities-vishkrm/k8s-utilities:0.0.5": {},
-    "ghcr.io/nikunh/002-user-setup-vishkrm/002-user-setup:0.0.7": {}
+    "ghcr.io/nikunh/002-user-setup-vishkrm/002-user-setup:0.0.7": {},
+    "ghcr.io/nikunh/aider-vishkrm/aider:0.0.6": {}
   },
   "remoteUser": "vishkrm",
   "runArgs": [
