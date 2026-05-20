@@ -37,7 +37,9 @@
   "runArgs": [
     "--privileged",
     "-v",
-    "/var/run/docker.sock:/var/run/docker.sock"
+    "/var/run/docker.sock:/var/run/docker.sock",
+    "-p",
+    "2223:2222"
   ],
   "containerEnv": {
     "HOME": "/home/vishkrm",
@@ -47,7 +49,7 @@
     2222,
     6623
   ],
-  "postCreateCommand": "/usr/local/bin/setup-workspace-link && echo 'DevContainer ready! Shellinator GitHub v0.0.1 - Clean GitHub features loaded. SSH, nvim, tmux, code-server, AI tools available. Browsh and conda temporarily disabled. Use shellinator-enhance for private features.'",
+  "postCreateCommand": "sudo sed -i 's/^AllowUsers .*/AllowUsers vishkrm/' /etc/ssh/sshd_config.d/devcontainer.conf && sudo service ssh restart; /usr/local/bin/setup-workspace-link && echo 'DevContainer ready! Shellinator GitHub v0.0.1 - Clean GitHub features loaded. SSH, nvim, tmux, code-server, AI tools available. Browsh and conda temporarily disabled. Use shellinator-enhance for private features.'",
   "customizations": {
     "vscode": {
       "extensions": [
