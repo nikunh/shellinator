@@ -73,7 +73,11 @@
         "ms-vscode.makefile-tools",
         "continue.continue",
         "ex-human.model-context",
-        "ms-kubernetes-tools.vscode-kubernetes-tools"
+        "ms-kubernetes-tools.vscode-kubernetes-tools",
+        "bierner.markdown-mermaid",
+        "kortina.vscode-markdown-notes",
+        "ms-vscode.live-server",
+        "mechatroner.rainbow-csv"
       ],
       "settings": {}
     }
