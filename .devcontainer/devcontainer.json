@@ -43,7 +43,8 @@
   ],
   "containerEnv": {
     "HOME": "/home/vishkrm",
-    "SSH_TARGET_PORT": "${localEnv:SSH_TARGET_PORT:2222}"
+    "SSH_TARGET_PORT": "${localEnv:SSH_TARGET_PORT:2222}",
+    "SHELLINATOR_HOST": "${localEnv:SHELLINATOR_HOST:unknown}"
   },
   "forwardPorts": [
     2222,
