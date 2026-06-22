@@ -44,13 +44,17 @@
   "containerEnv": {
     "HOME": "/home/vishkrm",
     "SSH_TARGET_PORT": "${localEnv:SSH_TARGET_PORT:2222}",
-    "SHELLINATOR_HOST": "${localEnv:SHELLINATOR_HOST:unknown}"
+    "SHELLINATOR_HOST": "${localEnv:SHELLINATOR_HOST:unknown}",
+    "WARP_ORG": "${localEnv:WARP_ORG}",
+    "WARP_CLIENT_ID": "${localEnv:WARP_CLIENT_ID}",
+    "WARP_CLIENT_SECRET": "${localEnv:WARP_CLIENT_SECRET}"
   },
   "forwardPorts": [
     2222,
     6623
   ],
   "postCreateCommand": "sudo sed -i 's/^AllowUsers .*/AllowUsers vishkrm/' /etc/ssh/sshd_config.d/devcontainer.conf && echo 'vishkrm:vishkrm' | sudo chpasswd && sudo service ssh restart; /usr/local/bin/setup-workspace-link && echo 'DevContainer ready! Shellinator GitHub v0.0.1 - Clean GitHub features loaded. SSH, nvim, tmux, code-server, AI tools available. Browsh and conda temporarily disabled. Use shellinator-enhance for private features.'",
+  "postStartCommand": "warp up >/tmp/warp-autoconnect.log 2>&1 || true",
   "customizations": {
     "vscode": {
       "extensions": [
