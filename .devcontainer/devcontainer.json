@@ -15,7 +15,6 @@
     "ghcr.io/nikunh/node-env-vishkrm/node-env:0.0.4": {},
     "ghcr.io/nikunh/003-zsh-setup-vishkrm/003-zsh-setup:0.0.6": {},
     "ghcr.io/nikunh/tmux-neovim-git-vishkrm/tmux-neovim-git:0.0.8": {},
-    "ghcr.io/nikunh/ai-tools-vishkrm/ai-tools:0.0.8": {},
     "ghcr.io/nikunh/devops-tools-vishkrm/devops-tools:0.0.5": {},
     "ghcr.io/nikunh/aider-vishkrm/aider:0.0.6": {},
     "ghcr.io/nikunh/browsh-vishkrm/browsh:0.0.5": {},
@@ -32,7 +31,8 @@
     "ghcr.io/nikunh/002-user-setup-vishkrm/002-user-setup:0.0.8": {},
     "ghcr.io/nikunh/001-dev-packages-vishkrm/001-dev-packages:0.0.20": {},
     "ghcr.io/nikunh/nas-connector-vishkrm/nas-connector:0.0.23": {},
-    "ghcr.io/nikunh/capability-publisher-vishkrm/capability-publisher:0.0.1": {}
+    "ghcr.io/nikunh/capability-publisher-vishkrm/capability-publisher:0.0.1": {},
+    "ghcr.io/nikunh/ai-tools-vishkrm/ai-tools:0.0.9": {}
   },
   "remoteUser": "vishkrm",
   "runArgs": [
