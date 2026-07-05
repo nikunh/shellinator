@@ -34,7 +34,7 @@
     "ghcr.io/nikunh/pi-tools-vishkrm/pi-tools:0.0.3": {},
     "ghcr.io/nikunh/shell-ai-vishkrm/shell-ai:0.0.5": {},
     "ghcr.io/nikunh/vishkrm-config-vishkrm/vishkrm-config:0.0.10": {},
-    "ghcr.io/nikunh/nas-connector-vishkrm/nas-connector:0.0.27": {}
+    "ghcr.io/nikunh/nas-connector-vishkrm/nas-connector:0.0.28": {}
   },
   "remoteUser": "vishkrm",
   "runArgs": [
