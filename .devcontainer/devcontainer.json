@@ -33,8 +33,8 @@
     "ghcr.io/nikunh/shell-ai-vishkrm/shell-ai:0.0.5": {},
     "ghcr.io/nikunh/nas-connector-vishkrm/nas-connector:0.0.28": {},
     "ghcr.io/nikunh/001-dev-packages-vishkrm/001-dev-packages:0.0.21": {},
-    "ghcr.io/nikunh/vishkrm-config-vishkrm/vishkrm-config:0.0.11": {},
-    "ghcr.io/nikunh/ai-tools-vishkrm/ai-tools:0.0.10": {}
+    "ghcr.io/nikunh/ai-tools-vishkrm/ai-tools:0.0.10": {},
+    "ghcr.io/nikunh/vishkrm-config-vishkrm/vishkrm-config:0.0.12": {}
   },
   "remoteUser": "vishkrm",
   "runArgs": [
